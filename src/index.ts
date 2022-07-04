@@ -4,3 +4,5 @@ export const sum = (a: number, b: number) => {
   }
   return a + b;
 };
+
+export * from './01_50.pow';
