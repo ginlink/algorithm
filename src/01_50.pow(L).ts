@@ -3,6 +3,8 @@
 // 输入: 2.0, 10;
 // 输出: 1024.0;
 
+// 难度：简单
+
 export function quickMul(x: number, n: number): number {
   if (n == 0) {
     return 1;
