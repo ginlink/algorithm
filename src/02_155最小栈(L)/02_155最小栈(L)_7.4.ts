@@ -10,6 +10,7 @@
 // ;[null, null, null, null, -3, null, 0, -2]
 
 // 难度：简单
+// [1] https://segmentfault.com/a/1190000041534341
 
 export class MinStack {
   private stack: number[] = [];
