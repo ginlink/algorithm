@@ -7,12 +7,12 @@
 
 export function quickMul(x: number, n: number): number {
   if (n == 0) {
-    return 1;
+    return 1
   }
 
-  const y = quickMul(x, Math.floor(n / 2));
+  const y = quickMul(x, Math.floor(n / 2))
 
-  return n % 2 == 0 ? y * y : y * y * x;
+  return n % 2 == 0 ? y * y : y * y * x
 }
 
 // 思路：假设算2^10，我一次性算不出来2^10，那我先去算2^5*2^5
