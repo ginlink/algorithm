@@ -7,12 +7,12 @@
 
 export function quickMul(x: number, n: number): number {
   if (n == 0) {
-    return 1;
+    return 1
   }
 
-  const y = quickMul(x, Math.floor(n / 2));
+  const y = quickMul(x, Math.floor(n / 2))
 
   // 为什么如果冥是奇数这里要乘以 底？
   // 因为 要抵消向下取整的差值
-  return n % 2 == 0 ? y * y : y * y * x;
+  return n % 2 == 0 ? y * y : y * y * x
 }

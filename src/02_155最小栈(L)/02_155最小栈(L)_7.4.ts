@@ -13,29 +13,27 @@
 // [1] https://segmentfault.com/a/1190000041534341
 
 export class MinStack {
-  private stack: number[] = [];
-  private minStack: number[] = [Infinity];
+  private stack: number[] = []
+  private minStack: number[] = [Infinity]
 
   push(value: number) {
-    this.stack.push(value);
+    this.stack.push(value)
 
-    this.minStack.push(
-      Math.min(value, this.minStack[this.minStack.length - 1])
-    );
+    this.minStack.push(Math.min(value, this.minStack[this.minStack.length - 1]))
   }
 
   pop() {
-    const e = this.stack.pop();
-    this.minStack.pop();
+    const e = this.stack.pop()
+    this.minStack.pop()
 
-    return e;
+    return e
   }
 
   top() {
-    return this.stack[this.stack.length - 1];
+    return this.stack[this.stack.length - 1]
   }
 
   getMin() {
-    return this.minStack[this.minStack.length - 1];
+    return this.minStack[this.minStack.length - 1]
   }
 }
