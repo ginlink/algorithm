@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/01_50.pow(L)/01_50.pow(L)_7.4.ts</title>
+    <title>Code coverage report for src/01_50.pow(L)/01_50.pow(L)_7.5.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/01_50.pow(L)</a> 01_50.pow(L)_7.4.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/01_50.pow(L)</a> 01_50.pow(L)_7.5.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -81,8 +81,7 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -96,10 +95,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// 题目：实现 pow(x, n) ，即计算 x 的 n 次幂函数。
 &nbsp;
@@ -115,11 +113,10 @@
 &nbsp;
   const y = <span class="cstat-no" title="statement not covered" >quickMul(x, Math.floor(n / 2))</span>
 &nbsp;
+  // 为什么如果冥是奇数这里要乘以 底？
+  // 因为 要抵消向下取整的差值
 <span class="cstat-no" title="statement not covered" >  return n % 2 == 0 ? y * y : y * y * x</span>
 }
-&nbsp;
-// 思路：假设算2^10，我一次性算不出来2^10，那我先去算2^5*2^5
-// 同理，我一次性算不出来2^10，那我先去算2^2*2^3
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

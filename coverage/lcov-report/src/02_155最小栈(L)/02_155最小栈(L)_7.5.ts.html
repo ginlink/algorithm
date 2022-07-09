@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/02_155最小栈(L)/02_155最小栈(L)_7.4.ts</title>
+    <title>Code coverage report for src/02_155最小栈(L)/02_155最小栈(L)_7.5.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/02_155最小栈(L)</a> 02_155最小栈(L)_7.4.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/02_155最小栈(L)</a> 02_155最小栈(L)_7.5.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>0/17</span>
             </div>
         
             
@@ -99,10 +99,7 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,7 +124,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -138,8 +134,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// 题目：155.最小栈
 // 设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。
@@ -159,26 +153,23 @@ export class <span class="fstat-no" title="function not covered" >MinStack </spa
   privat<span class="cstat-no" title="statement not covered" >e stack: number[]</span> = []
   privat<span class="cstat-no" title="statement not covered" >e minStack: number[] = [Infi</span>nity]
 &nbsp;
-  pu<span class="cstat-no" title="statement not covered" >sh(value: number) {<span class="fstat-no" title="function not covered" ></span></span>
-    this<span class="cstat-no" title="statement not covered" >.stack.push(value)</span>
-<span class="cstat-no" title="statement not covered" ></span>
-    this.minStack.push(Math.min(value, this.minStack[this.minStack.length - 1]))
+  pu<span class="cstat-no" title="statement not covered" >sh(e: number) {<span class="fstat-no" title="function not covered" ></span></span>
+    this<span class="cstat-no" title="statement not covered" >.stack.push(e)</span>
+    this<span class="cstat-no" title="statement not covered" >.minStack.push(Math.min(e, this.minStack[this.minStack.length - 1]))</span>
+  }
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
+  pop() <span class="cstat-no" title="statement not covered" >{</span>
+    this<span class="cstat-no" title="statement not covered" >.minStack.pop()</span>
+    return this.stack.pop()
   }<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
 <span class="cstat-no" title="statement not covered" ></span>
-  pop() <span class="cstat-no" title="statement not covered" >{</span>
-    cons<span class="cstat-no" title="statement not covered" >t e = this</span>.stack.pop()
-    this.minStack.pop()
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
-    retu<span class="cstat-no" title="statement not covered" >rn e</span>
-  }
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
-  top() <span class="cstat-no" title="statement not covered" >{</span>
-    return this.stack[this.stack.length - 1]
+  top(): number {
+<span class="cstat-no" title="statement not covered" >    return this.stack[this.stack<span class="fstat-no" title="function not covered" >.l</span>ength - 1]</span>
   }<span class="cstat-no" title="statement not covered" ></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  getMin() {</span>
+  ge<span class="cstat-no" title="statement not covered" >tMin(): number {</span>
     return this.minStack[this.minStack.length - 1]
-  }
+<span class="cstat-no" title="statement not covered" >  }</span>
 }
 &nbsp;</pre></td></tr></table></pre>
 
