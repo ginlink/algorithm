@@ -104,17 +104,16 @@ export function bubbleSort(nums: number[]): number[] {
 
 export function insertSort(nums: number[]): number[] {
   const len = nums.length
-
-  for (let i = 1; i < len; ++i) {
+  for (let i = 0; i < len; ++i) {
     let j = i
-    let temp = nums[j]
+    let tmp = nums[j]
 
-    while (j > 0 && nums[j - 1] > temp) {
+    while (j > 0 && tmp < nums[j - 1]) {
       nums[j] = nums[j - 1]
       --j
     }
 
-    nums[j] = temp
+    nums[j] = tmp
   }
 
   return nums
