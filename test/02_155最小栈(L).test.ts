@@ -23,4 +23,7 @@ describe('min stack', () => {
     expect(minStack.top()).toBe(0)
     expect(minStack.getMin()).toBe(-2)
   })
+  it('minStack empty', () => {
+    expect(minStack.getMin()).toBe(undefined)
+  })
 })

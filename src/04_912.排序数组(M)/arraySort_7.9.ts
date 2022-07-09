@@ -108,7 +108,7 @@ export function insertSort(nums: number[]): number[] {
     let j = i
     let tmp = nums[j]
 
-    while (j > 0 && nums[j - 1] > nums[j]) {
+    while (j > 0 && tmp < nums[j - 1]) {
       nums[j] = nums[j - 1]
       --j
     }
