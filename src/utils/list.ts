@@ -24,9 +24,10 @@ export function createList(n = 5): ListNode | undefined {
   return head
 }
 
-export function traverseList(head: ListNode | undefined) {
+export function traverseList(head: ListNode | undefined, callback: (node: ListNode | undefined) => void) {
   let clone = head
   while (clone) {
+    callback(clone)
     clone = clone.next
   }
 }
