@@ -1,9 +1,9 @@
 export class TreeNode {
-  val: number | null
+  val: number
   left: TreeNode | null | undefined = null
   right: TreeNode | null | undefined = null
 
-  constructor(val: number | null, left?: TreeNode | null, right?: TreeNode | null) {
+  constructor(val: number, left?: TreeNode | null, right?: TreeNode | null) {
     this.val = val
     this.left = left
     this.right = right
@@ -22,16 +22,17 @@ export function arr2tree(arr: (number | null)[]) {
   let isLeft = true
   for (let i = 1; i < arr.length; ++i) {
     const peekEl = queue[queue.length - 1]
+    const val = arr[i]
 
     if (isLeft) {
-      if (arr[i] != null) {
-        peekEl.left = new TreeNode(arr[i])
+      if (val != null) {
+        peekEl.left = new TreeNode(val)
         queue.unshift(peekEl.left)
       }
       isLeft = false
     } else {
-      if (arr[i] != null) {
-        peekEl.right = new TreeNode(arr[i])
+      if (val != null) {
+        peekEl.right = new TreeNode(val)
         queue.unshift(peekEl.right)
       }
 
@@ -44,10 +45,10 @@ export function arr2tree(arr: (number | null)[]) {
 }
 
 // Not optimizing the array to binary tree
-export function arr2tree2(arr: (number | null)[]) {
+export function arr2tree2(arr: number[]) {
   return createTreeNode(arr, 1)
 
-  function createTreeNode(arr: (number | null)[], index: number): TreeNode | null {
+  function createTreeNode(arr: number[], index: number): TreeNode | null {
     if (arr[index - 1] == null) {
       return null
     }
