@@ -8,9 +8,10 @@ import { swap } from '../utils'
 
 export function quickSort(nums: number[]): number[] {
   const len = nums.length
-  recQuickSort(nums, 0, len - 1)
+  recQuickSotr(nums, 0, len - 1)
   return nums
-  function recQuickSort(nums: number[], L: number, R: number) {
+
+  function recQuickSotr(nums: number[], L: number, R: number) {
     if (L >= R) {
       return
     }
@@ -34,12 +35,12 @@ export function quickSort(nums: number[]): number[] {
       }
 
       if (left >= right) {
-        nums[left] = pivot
+        nums[right] = pivot
       }
     }
 
-    recQuickSort(nums, L, right - 1)
-    recQuickSort(nums, right + 1, R)
+    recQuickSotr(nums, L, right - 1)
+    recQuickSotr(nums, right + 1, R)
   }
 }
 
