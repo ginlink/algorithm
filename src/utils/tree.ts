@@ -45,7 +45,7 @@ export function arr2tree(arr: (number | null)[]) {
 }
 
 // Not optimizing the array to binary tree
-export function arr2tree2(arr: number[]) {
+export function arr2treeNoOptimizing(arr: number[]) {
   return createTreeNode(arr, 1)
 
   function createTreeNode(arr: number[], index: number): TreeNode | null {
